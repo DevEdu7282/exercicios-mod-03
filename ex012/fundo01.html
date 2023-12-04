@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod 3 Aul 13 Cap 19</title>
+
+    <style>
+        .quadrado{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quadrado#q1{
+            background-color: aqua;
+        }
+
+        .quadrado#q2{
+            background-image: linear-gradient(to bottom, red, yellow);
+        }
+
+        .quadrado#q3{
+            background-image: url('images/pattern003.png');
+        }
+
+        .quadrado#q3 p{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--TITULO-->
+    <h1>Teste de Imagem de fundo</h1>
+
+    <hr>
+    <br>
+    <!--COMO UTILIZANDO BACKGROUND NO CSS-->
+    <h2>Como utilizar os Background</h2>
+    <br>
+
+    <div class="quadrado" id="q1"> <!--Div 1-->
+        <p>01</p>
+        <p>background-color: COR DESEJADA;</p>
+    </div>
+
+    <div class="quadrado" id="q2"> <!--Div 2-->
+        <p>01</p>
+        <p>background-image: linear-gradient(POSIÇÂO, COR DESEJADA);</p>
+    </div>
+
+    <div class="quadrado" id="q3"> <!--Div 3-->
+        <p>03</p>
+        <p>background-image: url('CAMINHO DA IMAGE');</p>
+    </div>
+    <br>
+
+    <p>No <b>background-image</b> podemos utilizar ele como gradiente como está na segunda imagem ou podemos utilizar o <b>background-image</b> com uma imagem como está no segundo bloco</p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod 3 Aul 14 Cap 19</title>
+
+    <style>
+        .quadrado{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            border: 1px solid black;
+            display: inline-block;
+            height: 300px;
+            width: 235px;
+            background-size: 50px 50px;
+            text-align: center;
+        }
+
+        .quadrado p{
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+
+        .quadrado#q1{
+            background-repeat: repeat;
+        }
+
+        .quadrado#q2{
+            background-repeat: no-repeat;
+        }
+
+        .quadrado#q3{
+            background-repeat: repeat-y;
+        }
+
+        .quadrado#q4{
+            background-repeat: repeat-x;
+        }
+
+        h3{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--TITULO-->
+    <h1>Personalização do fundo da imagem</h1>
+
+    <hr>
+
+    <!--Diferentes maneira de repetir a imagem-->
+    <h2>Teste de aplicação de fundo</h2>
+
+    <div class="quadrado" id="q1"> <!--Div 01-->
+        <p>01 <br> background-repeat: repeat;</p>
+    </div>
+
+    <div class="quadrado" id="q2"> <!--Div 02-->
+        <p>02 <br> background-repeat: no-repeat;</p>
+    </div>
+
+    <div class="quadrado" id="q3"> <!--Div 03-->
+        <p>03 <br> background-repeat: repeat-y;</p>
+    </div>
+    
+    <div class="quadrado" id="q4"> <!--Div 04-->
+        <p>04 <br> background-repeat: repeat-x;</p>
+    </div>
+
+
+    <p>01 - No primeiro exempro temos <b>background-repeat: repeat;</b> que serve <b>para repedir</b> a foto que está no css.</p>
+    <p>02 - No segundo exempro temos <b>background-repeat: no-repeat;</b> que serve <b>para não</b> repedir a foto que está no css.</p>
+    <p>03 - No terceiro exempro temos <b>background-repeat: repeat-y;</b> que serve para repedir a foto da <b>direita para esquerda</b> em uma unica linha no css.</p>
+    <p>04 - No quarto exempro temos <b>background-repeat: repeat-x;</b> que serve para repedir a foto de <b>cima para baixo</b> em uma unica linha no css.</p>
+
+    <h3>IMPORTANTE</h3>
+    <p>A imagem só vai se repetir se ela estiver peguena caso ao contrario não vai.</p>
+    <p>Utilize <b>backgraun-size</b> para diminuir a foto <b>EXEMPLO = backgraun-size: 50px 50px;</b></p>
+</body>
+</html>
