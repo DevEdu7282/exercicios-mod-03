@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .quadrado-1{
+            background-color: blueviolet;
+            color: aliceblue;
+            background-image: url(images/target001.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 94vh;
+            padding: 10px 20px;
+        }
+
+        .quadrado-1 p > b{
+            color: rgb(38, 192, 33);
+        }
+
+        .quadrado-2{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background-color: gold;
+            background-image: url(images/target001.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 400px;
+            height: 300px;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .quadrado-2 p{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main class="quadrado-1">
+        <h1>Posição das Div</h1>
+        <p>Para deixar assim precisamos colocar nos elementos <b>possition: ;</b> na primeira div que será a base temos que colocar <b>possition: relative;</b> mas não é obrigatorio como o da segunda div que será centralizada porq todas div por padrão já é <b>possition: relative;</b>.</p>
+        <p>Para a segunda div que será centralizada precisamos colocar <b>possition: absolute;</b> depois <b>left: 50% ou px;</b> <b>e top: 50% ou px;</b>. isso fara a foto ficar no cando do meio mas não exatamente no meio para ficar exatamente no meio temos que usar <b>transform: translate(-50, _50);</b> e ficara exatamente no meio.</p>
+        <section class="quadrado-2">
+            <h2>Exemplo</h2>
+            <p>
+                    &gt;style&lt; <br>
+                    .quadrado-1{ <br>
+                        position: relative; <br>
+                    } <br> <br>
+                    .quadrado-2{ <br>
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    } <br>
+                    &gt;/style&lt;
+         </p>
+        </section>
+    </main>
+</body>
+</html>
