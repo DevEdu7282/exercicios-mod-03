@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table1{
+            border: 1px solid black;
+            width: 300px;
+        }
+
+        .table1 tr > td{
+            border: 1px solid black;
+            padding: 5px 15px;
+            text-align: center;
+        }
+
+        .table2{
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        .table2 tr > td{
+            border: 1px solid black;
+            padding: 5px 15px;
+            text-align: center;
+        }
+
+        .table3{
+            width: 300px;
+            border-collapse: separate;
+        }
+
+        .table3 tr > td{
+            border: 1px solid black;
+            padding: 5px 15px;
+            text-align: center;
+        }
+
+        .table4{
+            width: 300px;
+            height: 300px;
+            border-collapse: separate;
+        }
+
+        .table4 tr > td{
+            border: 1px solid black;
+            padding: 5px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abrendendo Tabela</h1>
+
+    <hr>
+    <br>
+
+    <h2>Herarquia de Tabela simples</h2>
+    <!--
+        HERARQUIA DE TABELAS (simples)
+        TABLE = tabela
+           TABLE ROW = linha de tabela
+              TABLE HEADER = cabeçalho de tabela
+              TABLE DATA = dado de tabela
+    -->
+    <p>Na Herarquia de Tabela temos o <b>table = TABELA</b> e temos o <b>table row = LINHA DE TABELA</b> que fica por dentro da table e o <b>table header = CABEÇALHO DE TABELA</b> e por ultimo o <b>table tada = DADO DE TABELA</b>.</p>
+    <ul>
+        <li>table = TABELA <strong>(table)</strong></li>
+        <ul>
+            <li>table row = LINHA DE TABELA <strong>(tr)</strong></li>
+            <ul>
+                <li>table header = CABEÇALHO DE TABELA <strong>(th)</strong></li>
+                <li>table tada = DADO DE TABELA <strong>(td)</strong></li>
+            </ul>
+        </ul>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>Forma 1</h3>
+
+    <table class="table1">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Exemplo <br>
+
+            &lt;style&gt; <br>
+            .table1{ <br>
+                border: 1px solid black; <br>
+                width: 300px; <br>
+            } <br> <br>
+
+            .table1 tr > td{ <br>
+                border: 1px solid black; <br>
+                padding: 5px 15px; <br>
+                text-align: center; <br>
+            } <br>
+            &lt;/style&gt;
+        </li>
+    </ul>
+
+    <br>
+
+    <h3>Forma 2</h3>
+    <p>Colocando o <b>border-collapse: collapse;</b></p>
+
+    <table class="table2">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Exemplo <br>
+
+            &lt;style&gt; <br>
+            .table2{ <br>
+                border-collapse: collapse; <br>
+                width: 300px; <br>
+            } <br> <br>
+
+            .table2 tr > td{ <br>
+                border: 1px solid black; <br>
+                padding: 5px 15px; <br>
+                text-align: center; <br>
+            } <br>
+            &lt;/style&gt;
+        </li>
+    </ul>
+
+    <br>
+
+    <h3>Forma 3</h3>
+    <p>Colocando o <b>border-collapse: separate;</b> para separar a tabela, Mas já é padrão então não precisar colocar.</p>
+
+    <table class="table3">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Exemplo <br>
+
+            &lt;style&gt; <br>
+            .table3{ <br>
+                width: 300px; <br>
+                border-collapse: separate; <br>
+            } <br> <br>
+
+            .table3 tr > td{ <br>
+                border: 1px solid black; <br>
+                padding: 5px 15px; <br>
+                text-align: center; <br>
+            } <br>
+            &lt;/style&gt;
+        </li>
+    </ul>
+
+    <br>
+
+    <h3>Forma 4</h3>
+    <p>1 - Para alinhamento <b>Horizontal</b> usanos o <b>text-align</b> e os valores <b>left = esquerda</b> e <b>center = centro</b> e <b>right = direita</b></p>
+    <p>2 - Para alinhamento <b>Vertical</b> usanos o <b>vertival-align</b> e os valores <b>top = cima</b> e <b>middle = centro</b> e <b>bottom = baixo</b></p>
+    <table class="table4">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Exemplo <br>
+
+            &lt;style&gt; <br>
+            .table4{ <br>
+                border: 1px solid black; <br>
+                width: 300px; <br>
+                height: 300px; <br>
+            } <br> <br>
+
+            .table4 tr > td{ <br>
+                border: 1px solid black; <br>
+                padding: 5px 15px; <br>
+                text-align: left; <br>
+                vertical-align: top; <br>
+            } <br>
+            &lt;/style&gt;
+        </li>
+    </ul>
+</body>
+</html>
