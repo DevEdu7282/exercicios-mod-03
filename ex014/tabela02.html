@@ -11,11 +11,17 @@
             padding: 0;
         }
 
+        .quadrado{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
         .tabela{
-            background-color: rgb(255, 4, 4);
-            color: white;
-            border: 1px solid rgb(7, 255, 243);
-            height: 585px;
+            background-color: rgb(223, 230, 233);
+            color: rgba(0, 0, 0, 0.788);
+            border: 3px solid rgb(0, 0, 0);
+            height: 620px;
             width: 350px;
             text-align: center;
         }
@@ -32,11 +38,16 @@
         }
 
         th{
-            padding: 10px 5px;
+        padding: 5px 0px;
         }
 
         th, td{
             border: 1px solid black;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: rgb(255, 255, 255);
+
         }
 
         .left{
@@ -48,71 +59,115 @@
             border-bottom: 5px solid black;
         }
 
-
+        .left#border{
+            border-top: 2.5px solid black;
+        }
     </style>
 </head>
 <body>
     
     <h1>Tabelas Semanticas</h1>
-    <div class="tabela">
-        <h2>Informação Nutricional</h2>
-        <p class="left">Porções por embalagem: 4</p>
-        <p class="left" id="text">Porções: 5g (1/2 Colher de Sopa)</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Vazio</th>
-                    <th>100g**</th>
-                    <th>5g</th>
-                    <th>%VD*</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="left">Valor Energético (Kcal)</td>
-                    <td>13</td>
-                    <td>16</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td class="left">Carboidratos (g)</td>
-                    <td>2,1</td>
-                    <td>1,5</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td class="left">Açúcares Totais (g)</td>
-                    <td>2,1</td>
-                    <td>2,5</td>
-                    <td>v</td>
-                </tr>
-                <tr>
-                    <td class="left">Açúcares Adicionados (g)</td>
-                    <td>2,1</td>
-                    <td>2,5</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td class="left">Proteinas (g)</td>
-                    <td>1,3</td>
-                    <td>1,5</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td class="left">Sódio (mg)</td>
-                    <td>66</td>
-                    <td>79</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td class="left">Vitamina C (mg)</td>
-                    <td>13</td>
-                    <td>15</td>
-                    <td>15 </td>
-                </tr>
-            </tbody>
-            <tfoot></tfoot>
-        </table>
+    <div class="quadrado">
+        <div>
+            <h2>Como é a tabela semantica</h2>
+            <p>Para tabela semantica usamos a anatomia:</p>
+            <ul>
+                <li>TABLE</li> <br>
+                <ul>
+                    <li><b>THEAD</b></li>
+                    <ul>
+                        <li>TR, TH, TD</li> <br>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><b>TBODY</b></li>
+                    <ul>
+                        <li>TR, TH, TD</li> <br>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><b>TFOOT</b></li>
+                    <ul>
+                        <li>TR, TH, TD</li> <br>
+                    </ul>
+                </ul>
+            </ul>
+            <br>
+            <h3>Para deixar com efeito zebrado usamos o <b>pseudo classe</b> chamado <b>:nth-child(2n)</b></h3>
+            <p>Exemplo <br>
+                &lt;style&gt; <br>
+                tbody > tr:nth-child(2n) { <br>
+                    background-colo: #625272; <br>
+                } <br>
+                &lt;/style&gt;
+            </p><br> <br>
+            <p>Temos que colocar o <b>:nth-child(2n)</b> no <b>tr</b> que é a linha da tabela, e o <b>(2n)</b> do <b>:nth-child(2n)</b> é que vai chamar todo numero par para zebrar se quiser impar tem que ser <b>:nth-child(2n-1)</b></p>
+        </div>
+
+        <div class="tabela">
+            <h2>Informação Nutricional</h2>
+            <p class="left">Porções por embalagem: 4</p>
+            <p class="left" id="text">Porções: 5g (1/2 Colher de Sopa)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vazio</th>
+                        <th>100g**</th>
+                        <th>5g</th>
+                        <th>%VD*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="left">Valor Energético (Kcal)</td>
+                        <td>13</td>
+                        <td>16</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Carboidratos (g)</td>
+                        <td>2,1</td>
+                        <td>1,5</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Açúcares Totais (g)</td>
+                        <td>2,1</td>
+                        <td>2,5</td>
+                        <td>v</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Açúcares Adicionados (g)</td>
+                        <td>2,1</td>
+                        <td>2,5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Proteinas (g)</td>
+                        <td>1,3</td>
+                        <td>1,5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Sódio (mg)</td>
+                        <td>66</td>
+                        <td>79</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Vitamina C (mg)</td>
+                        <td>13</td>
+                        <td>15</td>
+                        <td>15 </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+            <p class="left" id="border">Não contém quantidades significativas de Gordura totais, Gorduras saturadas, Gorduras trans e Fibras Alimentares.</p>
+            <p class="left">*Percentual de valores diários fornrcido pela porção.</p>
+            <p class="left">**No alimento pronto para o consumo.</p>
+        </div>
     </div>
 </body>
 </html>

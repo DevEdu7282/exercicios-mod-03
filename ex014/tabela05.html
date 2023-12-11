@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr,td,th{
+            border: 1px solid black;
+            padding: 3px 10px;
+        }
+
+        .amarelo{
+            background-color: yellow;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .table01{
+            overflow-x: auto;
+            width: 400px;
+        }
+
+        .table01 tbody > tr:nth-child(2n-1){
+            background-color: #0000006c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agrupando colunas com Colgroup</h1>
+
+    <table>
+
+        <colgroup>
+            <col class="amarelo">
+            <col class="red" span="2">
+            <col class="amarelo">
+        </colgroup>
+
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Cidade</th>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>M</td>
+            <td>18</td>
+            <td>Rj</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>19</td>
+            <td>Rs</td>
+        </tr>
+        <tr>
+            <td>Victoria</td>
+            <td>F</td>
+            <td>20</td>
+            <td>Sp</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>M</td>
+            <td>17</td>
+            <td>Mg</td>
+        </tr>
+        <tr>
+            <td>Julia</td>
+            <td>F</td>
+            <td>19</td>
+            <td>Rj</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h2>Como usar o "colgroup"</h2>
+    <p>Usamos o <b>colgroup</b> dentro da tag <b>table</b> para colocarmos uma cor na coluna da tabela, para não temos que ficar colocando class em cada uma delas</p>
+    <p>Dentro do <b>colgroup</b> colocamos <b>col</b> que representa cada coluna na tabela e acresentamos a uma <b>class</b> a ela</p>
+    <ul>
+        <li>Exemplo <br> <br>
+            &lt;table&gt; <br>
+            ...&lt;colgroup&gt; <br>
+            .....&lt;col class="amarelo"&gt; <br>
+            .....&lt;col class="red" span="2"&gt; <br>
+            .....&lt;col class="amarelo"&gt; <br>
+            ...&lt;/colgroup&gt; <br>
+            &lt;/table&gt;
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h2>Como deixar responsivo</h2>
+    <p>Para deixamos a tabela responsiva envelopamos ela dentro de uma <b>div</b> e colocamos no <b>css</b> o valor <b>overflow-x: auto;</b></p>
+    <p>Exemplo <br> <br>
+        &lt;style&gt; <br>
+        div{ <br>
+           .. overflow-x: auto; <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
+    <div class="table01">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produtor</th>
+                    <th scope="col">Jan</th>
+                    <th scope="col">Fev</th>
+                    <th scope="col">Mar</th>
+                    <th scope="col">Abr</th>
+                    <th scope="col">Mai</th>
+                    <th scope="col">Jun</th>
+                    <th scope="col">Jul</th>
+                    <th scope="col">Ago</th>
+                    <th scope="col">Set</th>
+                    <th scope="col">Out</th>
+                    <th scope="col">Nov</th>
+                    <th scope="col">Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 40"</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Readmi note 8</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Iphone XR</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Ipad mini</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Xbox one</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Samsung S20</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

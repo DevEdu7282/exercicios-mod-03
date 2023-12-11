@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .quadrado{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        table{
+            border-collapse: collapse;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        thead{
+            background-color: #3d3e3f;
+            color: #fff;
+        }
+
+        thead tr th{
+            position: sticky;
+            top: -1px;
+            background-color: #3d3e3f;
+
+        }
+
+        tbody tr:nth-child(2n-1){
+            background-color: #70727583;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <div class="quadrado">
+        <div class="sobre">
+            <h2>Como deixar Cabeçalho Fixo</h2>
+            <br>
+            <p>Exemplo</p>
+            <p>&lt;style&gt; <br>
+                <b>thead tr th{</b> <br>
+                ....position: sticky; <br>
+                ....top: -1px; <br>
+                ....background-color: #3d3e3f; <br>
+                } <br>
+               &lt;/style&gt;
+            </p>
+
+            <br>
+            <hr>
+            <br>
+
+            <p>Exemplo Mesclagem</p>
+            <p>&lt;table&gt; <br>
+                ...&lt;tr&gt; <br>
+                ......&lt;td colspan="2"&gt;A&lt;/td&gt; <br>
+                ......&lt;td rowspan="3"&gt;C&lt;/td&gt; <br>
+                ...&lt;/tr&gt; <br>
+                ...&lt;tr&gt; <br>
+                ......&lt;td rowspan="2"&gt;D&lt;/td&gt; <br>
+                ......&lt;td&gt;E&lt;/td&gt; <br>
+                ...&lt;/tr&gt; <br>
+                ...&lt;tr&gt; <br>
+                ......&lt;td&gt;H&lt;/td&gt; <br>
+                ...&lt;/tr&gt; <br>
+               &lt;/table&gt;
+            </p>
+
+            <br>
+
+            <p>Para deixar Mesclagem usamos <b>rowspan</b> e o <b>colspan</b> dentro do <b>td</b> ou <b>th</b> resumindo dentro da palavra que queremos mesclar. para subir com os blocos como na imagem ao lado usamos <b>colspan</b> e para descer usamos <b>rowspan</b></p>
+
+        </div>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pedro</td>
+                        <td>18</td>
+                        <td>Rj</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>20</td>
+                        <td>Sp</td>
+                    </tr>
+                    <tr>
+                        <td>Vitor</td>
+                        <td>18</td>
+                        <td>Mg</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>19</td>
+                        <td>Rs</td>
+                    </tr>
+                    <tr>
+                        <td>Fernando</td>
+                        <td>25</td>
+                        <td>Rn</td>
+                    </tr>
+                    <tr>
+                        <td>Julia</td>
+                        <td>17</td>
+                        <td>Rj</td>
+                    </tr>
+                    <tr>
+                        <td>Daniela</td>
+                        <td>18</td>
+                        <td>Rj</td>
+                    </tr>
+                    <tr>
+                        <td>Eduardo</td>
+                        <td>19</td>
+                        <td>Sp</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro</td>
+                        <td>18</td>
+                        <td>Rj</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th>de Pessoa</th>
+                        <td>09</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br>
+            <hr>
+            <br>
+
+            <h3>Mesclagem</h3>
+            <table>
+                <tr>
+                    <td colspan="2">A</td>
+                    <td rowspan="3">C</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">D</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br>
+
+    <h2>Complimentar</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis maiores sit deleniti quibusdam dignissimos est quis corrupti ea ab, quia accusamus eum facere rerum repudiandae, dolorem, at aperiam necessitatibus veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt at eaque nam veritatis sequi, tempore dolores non culpa excepturi ducimus possimus aspernatur. Et tempore natus libero sapiente, accusantium illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos, cumque corrupti temporibus ea corporis! Iusto aut aperiam blanditiis, rem non officia aliquid odio dicta distinctio itaque velit, pariatur cupiditate?</p>
+</body>
+</html>
